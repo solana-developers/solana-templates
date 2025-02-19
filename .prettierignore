@@ -3,3 +3,4 @@
 /coverage
 tmp
 pnpm-lock.yaml
+.next
