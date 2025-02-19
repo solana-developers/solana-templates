@@ -1,5 +1,5 @@
-import { HomeFeature } from '@/components/home/home-feature'
+import { DashboardFeature } from '@/components/dashboard/dashboard-feature'
 
 export default function Home() {
-  return <HomeFeature />
+  return <DashboardFeature />
 }

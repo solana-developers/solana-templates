@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { ThemeProvider } from '@/components/theme-provider'
+import { AppProviders } from '@/components/app-providers'
+import { AppLayout } from '@/components/app-layout'
 
 export const metadata: Metadata = {
   title: 'Placeholder',
   description: 'Description of placeholder',
 }
+
+const links: { label: string; path: string }[] = [
+  // More links...
+  { label: 'Account', path: '/account' },
+]
 
 export default function RootLayout({
   children,
@@ -15,9 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+        <AppProviders>
+          <AppLayout links={links}>{children}</AppLayout>
+        </AppProviders>
       </body>
     </html>
   )

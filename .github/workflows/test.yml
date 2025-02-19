@@ -21,6 +21,7 @@ jobs:
             legacy-react-vite-tailwind,
             legacy-react-vite-tailwind-basic,
             legacy-react-vite-tailwind-counter,
+            template-next-tailwind,
           ]
 
     steps:
