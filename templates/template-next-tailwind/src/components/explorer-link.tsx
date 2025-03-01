@@ -1,14 +1,14 @@
 'use client'
 
-import { useSolanaChain } from '@wallet-ui/react'
+import { useSolanaCluster } from '@wallet-ui/react'
 
 export function ExplorerLink({ path, label, className }: { path: string; label: string; className?: string }) {
-  const { chain } = useSolanaChain()
-  const cluster = chain.id.includes('mainnet') ? '' : `?cluster=${chain.id.split(':')[1]}`
+  const { cluster } = useSolanaCluster()
+  const suffix = cluster.id.includes('mainnet') ? '' : `?cluster=${cluster.id.split(':')[1]}`
 
   return (
     <a
-      href={`https://explorer.solana.com/${path}${cluster}`}
+      href={`https://explorer.solana.com/${path}${suffix}`}
       target="_blank"
       rel="noopener noreferrer"
       className={className ? className : `link font-mono`}

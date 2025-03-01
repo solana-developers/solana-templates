@@ -3,24 +3,17 @@
 import { AppModal } from '@/components/app-layout'
 import { ellipsify } from '@/components/ellipsify'
 import { ExplorerLink } from '@/components/explorer-link'
-import { Alert } from '@/components/ui/alert'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 import { Address, address as addressUtil } from 'gill'
 import { useQueryClient } from '@tanstack/react-query'
 import { UiWalletAccount } from '@wallet-standard/react'
-import { useSolanaChain, useSolanaWallet, useSolanaWalletAddress } from '@wallet-ui/react'
+import { useSolanaWallet } from '@wallet-ui/react'
 import { RefreshCw } from 'lucide-react'
 import { useMemo, useState } from 'react'
 
-import {
-  useGetBalance,
-  useGetSignatures,
-  useGetTokenAccounts,
-  useRequestAirdrop,
-  useTransferSol,
-} from './account-data-access'
+import { useGetBalance, useGetSignatures, useGetTokenAccounts, useTransferSol } from './account-data-access'
 
 export function AccountBalance({ address }: { address: Address }) {
   const query = useGetBalance({ address })
@@ -34,41 +27,41 @@ export function AccountBalance({ address }: { address: Address }) {
   )
 }
 
-export function AccountChecker() {
-  const address = useSolanaWalletAddress()
-  if (!address) {
-    return null
-  }
-  return <AccountBalanceCheck address={address} />
-}
+// export function AccountChecker() {
+//   const address = useSolanaWalletAddress()
+//   if (!address) {
+//     return null
+//   }
+//   return <AccountBalanceCheck address={address} />
+// }
 
-export function AccountBalanceCheck({ address }: { address: Address }) {
-  const { chain } = useSolanaChain()
-  const mutation = useRequestAirdrop({ address })
-  const query = useGetBalance({ address })
-
-  if (query.isLoading) {
-    return 'Loading...'
-  }
-  if (query.isError || !query.data) {
-    return (
-      <Alert>
-        <div className="flex justify-between items-center">
-          <span>
-            You are connected to <strong>{chain.label}</strong> but your account is not found on this cluster.
-          </span>
-          <Button onClick={() => mutation.mutateAsync(1).catch((err) => console.log(err))}>Request Airdrop</Button>
-        </div>
-      </Alert>
-    )
-  }
-  return null
-}
+// export function AccountBalanceCheck({ address }: { address: Address }) {
+//   const { cluster } = useSolanaCluster()
+//   const mutation = useRequestAirdrop({ address })
+//   const query = useGetBalance({ address })
+//
+//   if (query.isLoading) {
+//     return 'Loading...'
+//   }
+//   if (query.isError || !query.data) {
+//     return (
+//       <Alert>
+//         <div className="flex justify-between items-center">
+//           <span>
+//             You are connected to <strong>{cluster.label}</strong> but your account is not found on this cluster.
+//           </span>
+//           <Button onClick={() => mutation.mutateAsync(1).catch((err) => console.log(err))}>Request Airdrop</Button>
+//         </div>
+//       </Alert>
+//     )
+//   }
+//   return null
+// }
 
 export function AccountButtons({ address }: { address: Address }) {
-  const { chain } = useSolanaChain()
-  const isMainnet = chain.id === 'solana:mainnet'
-  const [airdropOpen, setAirdropOpen] = useState(false)
+  // const { cluster } = useSolanaCluster()
+  // const isMainnet = cluster.id === 'solana:mainnet'
+  // const [airdropOpen, setAirdropOpen] = useState(false)
   const [receiveOpen, setReceiveOpen] = useState(false)
   const [sendOpen, setSendOpen] = useState(false)
   const [account] = useSolanaWallet()
@@ -77,7 +70,7 @@ export function AccountButtons({ address }: { address: Address }) {
 
   return (
     <div className="flex gap-2 whitespace-nowrap">
-      {isMainnet ? null : <ModalAirdrop address={address} open={airdropOpen} setOpen={setAirdropOpen} />}
+      {/*{isMainnet ? null : <ModalAirdrop address={address} open={airdropOpen} setOpen={setAirdropOpen} />}*/}
       <ModalReceive address={address} open={receiveOpen} setOpen={setReceiveOpen} />
       {account && canSend ? (
         <ModalSend address={address} open={sendOpen} setOpen={setSendOpen} account={account} />
@@ -288,40 +281,40 @@ function ModalReceive({
   )
 }
 
-function ModalAirdrop({
-  open,
-  setOpen,
-  address,
-}: {
-  setOpen: (open: boolean) => void
-  open: boolean
-  address: Address
-}) {
-  const mutation = useRequestAirdrop({ address })
-  const [amount, setAmount] = useState('2')
-
-  return (
-    <AppModal
-      open={open}
-      onOpenChange={setOpen}
-      title="Airdrop"
-      description="Request airdrop of SOL to your account."
-      submitDisabled={!amount || mutation.isPending}
-      submitLabel="Request Airdrop"
-      submit={() => mutation.mutateAsync(parseFloat(amount)).then(() => setOpen(false))}
-    >
-      <Input
-        disabled={mutation.isPending}
-        type="number"
-        step="any"
-        min="1"
-        placeholder="Amount"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-      />
-    </AppModal>
-  )
-}
+// function ModalAirdrop({
+//   open,
+//   setOpen,
+//   address,
+// }: {
+//   setOpen: (open: boolean) => void
+//   open: boolean
+//   address: Address
+// }) {
+//   const mutation = useRequestAirdrop({ address })
+//   const [amount, setAmount] = useState('2')
+//
+//   return (
+//     <AppModal
+//       open={open}
+//       onOpenChange={setOpen}
+//       title="Airdrop"
+//       description="Request airdrop of SOL to your account."
+//       submitDisabled={!amount || mutation.isPending}
+//       submitLabel="Request Airdrop"
+//       submit={() => mutation.mutateAsync(parseFloat(amount)).then(() => setOpen(false))}
+//     >
+//       <Input
+//         disabled={mutation.isPending}
+//         type="number"
+//         step="any"
+//         min="1"
+//         placeholder="Amount"
+//         value={amount}
+//         onChange={(e) => setAmount(e.target.value)}
+//       />
+//     </AppModal>
+//   )
+// }
 
 function ModalSend({
   account,

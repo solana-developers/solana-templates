@@ -21,9 +21,9 @@ export function getWalletErrorMessage(err: unknown, fallbackMessage: React.React
       <div className="flex flex-col gap-4">
         <p>
           The wallet &apos;{err.context.walletName}&apos; (
-          {err.context.supportedChains.sort().map((chain, ii, { length }) => (
-            <React.Fragment key={chain}>
-              <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm">{chain}</code>
+          {err.context.supportedChains.sort().map((cluster, ii, { length }) => (
+            <React.Fragment key={cluster}>
+              <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm">{cluster}</code>
               {ii === length - 1 ? null : ', '}
             </React.Fragment>
           ))}
@@ -47,15 +47,15 @@ export function getWalletErrorMessage(err: unknown, fallbackMessage: React.React
     return (
       <div className="flex flex-col gap-4">
         <p>
-          This account does not support the chain{' '}
-          <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm">{err.context.chain}</code>.
+          This account does not support the cluster{' '}
+          <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm">{err.context.cluster}</code>.
         </p>
         <div>
-          Chains supported:
+          Clusters supported:
           <ul className="list-disc pl-5 mt-2">
-            {err.context.supportedChains.sort().map((chain) => (
-              <li key={chain}>
-                <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm">{chain}</code>
+            {err.context.supportedChains.sort().map((cluster) => (
+              <li key={cluster}>
+                <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm">{cluster}</code>
               </li>
             ))}
           </ul>

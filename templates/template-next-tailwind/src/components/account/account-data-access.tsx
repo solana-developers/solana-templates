@@ -8,12 +8,10 @@ import type { Blockhash } from 'gill'
 import {
   address,
   Address,
-  airdropFactory,
   appendTransactionMessageInstruction,
   assertIsTransactionMessageWithSingleSendingSigner,
   createTransactionMessage,
   getBase58Decoder,
-  lamports,
   pipe,
   setTransactionMessageFeePayerSigner,
   setTransactionMessageLifetimeUsingBlockhash,
@@ -23,17 +21,17 @@ import {
 
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { UiWalletAccount } from '@wallet-standard/react'
-import { SolanaRpc, useSolanaChain, useSolanaRpc } from '@wallet-ui/react'
+import { SolanaClient, useSolanaClient, useSolanaCluster } from '@wallet-ui/react'
 import { toast } from 'sonner'
 
 export function useGetBalance({ address }: { address: Address }) {
-  const { chain } = useSolanaChain()
-  const { rpc } = useSolanaRpc()
+  const { cluster } = useSolanaCluster()
+  const client = useSolanaClient()
 
   return useQuery({
-    queryKey: ['get-balance', { chain, address }],
+    queryKey: ['get-balance', { cluster, address }],
     queryFn: () =>
-      rpc
+      client.rpc
         .getBalance(address)
         .send()
         .then((res) => res.value),
@@ -41,24 +39,24 @@ export function useGetBalance({ address }: { address: Address }) {
 }
 
 export function useGetSignatures({ address }: { address: Address }) {
-  const { chain } = useSolanaChain()
-  const { rpc } = useSolanaRpc()
+  const { cluster } = useSolanaCluster()
+  const client = useSolanaClient()
 
   return useQuery({
-    queryKey: ['get-signatures', { chain, address }],
-    queryFn: () => rpc.getSignaturesForAddress(address).send(),
+    queryKey: ['get-signatures', { cluster, address }],
+    queryFn: () => client.rpc.getSignaturesForAddress(address).send(),
   })
 }
 
 export function useGetTokenAccounts({ address }: { address: Address }) {
-  const { chain } = useSolanaChain()
-  const { rpc } = useSolanaRpc()
+  const { cluster } = useSolanaCluster()
+  const client = useSolanaClient()
 
   return useQuery({
-    queryKey: ['get-token-accounts', { chain, address }],
+    queryKey: ['get-token-accounts', { cluster, address }],
     queryFn: async () =>
       Promise.all([
-        rpc
+        client.rpc
           .getTokenAccountsByOwner(
             address,
             { programId: TOKEN_PROGRAM_ADDRESS },
@@ -66,7 +64,7 @@ export function useGetTokenAccounts({ address }: { address: Address }) {
           )
           .send()
           .then((res) => res.value ?? []),
-        rpc
+        client.rpc
           .getTokenAccountsByOwner(
             address,
             { programId: TOKEN_2022_PROGRAM_ADDRESS },
@@ -79,22 +77,22 @@ export function useGetTokenAccounts({ address }: { address: Address }) {
 }
 
 export function useTransferSol({ address, account }: { address: Address; account: UiWalletAccount }) {
-  const { chain } = useSolanaChain()
+  const { cluster } = useSolanaCluster()
 
   const toastTransaction = useToastTransaction()
-  const { rpc } = useSolanaRpc()
-  const txSigner = useWalletAccountTransactionSendingSigner(account, chain.id)
-  const client = useQueryClient()
+  const client = useSolanaClient()
+  const txSigner = useWalletAccountTransactionSendingSigner(account, cluster.id)
+  const queryClient = useQueryClient()
 
   return useMutation({
-    mutationKey: ['transfer-sol', { chain, address }],
+    mutationKey: ['transfer-sol', { cluster, address }],
     mutationFn: async (input: { destination: Address; amount: number }) => {
       try {
         const { signature } = await createTransaction({
           txSigner,
           destination: input.destination,
           amount: input.amount,
-          rpc,
+          client,
         })
 
         console.log(signature)
@@ -110,11 +108,11 @@ export function useTransferSol({ address, account }: { address: Address; account
         toastTransaction(signature)
       }
       return Promise.all([
-        client.invalidateQueries({
-          queryKey: ['get-balance', { chain, address }],
+        queryClient.invalidateQueries({
+          queryKey: ['get-balance', { cluster, address }],
         }),
-        client.invalidateQueries({
-          queryKey: ['get-signatures', { chain, address }],
+        queryClient.invalidateQueries({
+          queryKey: ['get-signatures', { cluster, address }],
         }),
       ])
     },
@@ -124,40 +122,43 @@ export function useTransferSol({ address, account }: { address: Address; account
   })
 }
 
-export function useRequestAirdrop({ address }: { address: Address }) {
-  const { chain } = useSolanaChain()
-  const { rpc, rpcSubscriptions } = useSolanaRpc()
-  const client = useQueryClient()
-  const toastTransaction = useToastTransaction()
-  const airdrop = airdropFactory({ rpc, rpcSubscriptions })
-
-  return useMutation({
-    mutationKey: ['airdrop', { chain, address }],
-    mutationFn: async (amount: number = 1) =>
-      airdrop({
-        commitment: 'confirmed',
-        recipientAddress: address,
-        lamports: lamports(BigInt(Math.round(amount * 1_000_000_000))),
-      }),
-    onSuccess: (signature) => {
-      toastTransaction(signature)
-      return Promise.all([
-        client.invalidateQueries({ queryKey: ['get-balance', { chain, address }] }),
-        client.invalidateQueries({ queryKey: ['get-signatures', { chain, address }] }),
-      ])
-    },
-  })
-}
+// export function useRequestAirdrop({ address }: { address: Address }) {
+//   const { cluster } = useSolanaCluster()
+//   const client = useSolanaClient()
+//   const queryClient = useQueryClient()
+//   const toastTransaction = useToastTransaction()
+//   const airdrop = airdropFactory({
+//     rpc: client.rpc as RpcApi<SolanaRpcApiDevnet>,
+//     rpcSubscriptions: client.rpcSubscriptions as RpcSubscriptions<SignatureNotificationsApi>,
+//   })
+//
+//   return useMutation({
+//     mutationKey: ['airdrop', { cluster, address }],
+//     mutationFn: async (amount: number = 1) =>
+//       airdrop({
+//         commitment: 'confirmed',
+//         recipientAddress: address,
+//         lamports: lamports(BigInt(Math.round(amount * 1_000_000_000))),
+//       }),
+//     onSuccess: (signature) => {
+//       toastTransaction(signature)
+//       return Promise.all([
+//         queryClient.invalidateQueries({ queryKey: ['get-balance', { cluster, address }] }),
+//         queryClient.invalidateQueries({ queryKey: ['get-signatures', { cluster, address }] }),
+//       ])
+//     },
+//   })
+// }
 
 async function createTransaction({
   amount,
   destination,
-  rpc,
+  client,
   txSigner,
 }: {
   amount: number
   destination: Address
-  rpc: SolanaRpc
+  client: SolanaClient
   txSigner: TransactionSendingSigner
 }): Promise<{
   signature: string
@@ -166,7 +167,7 @@ async function createTransaction({
     lastValidBlockHeight: bigint
   }
 }> {
-  const { value: latestBlockhash } = await rpc.getLatestBlockhash({ commitment: 'confirmed' }).send()
+  const { value: latestBlockhash } = await client.rpc.getLatestBlockhash({ commitment: 'confirmed' }).send()
 
   const message = pipe(
     createTransactionMessage({ version: 0 }),

@@ -1,17 +1,17 @@
 'use client'
 
+import React, { ReactNode, useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { usePathname } from 'next/navigation'
-import { ReactNode, useState } from 'react'
 import { ThemeProvider } from './theme-provider'
 import { ThemeSelect } from './theme-select'
 import { Button } from './ui/button'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogTitle, DialogTrigger } from './ui/dialog'
 import { ConnectWalletMenu } from './wallet-ui'
 import { Toaster } from './ui/sonner'
-import { ChainSelect } from './chain-select'
-import { ChainChecker } from './chain-checker'
+import { ClusterSelect } from './cluster-select'
+import { ClusterChecker } from './cluster-checker'
 
 export function AppLayout({ children, links }: { children: ReactNode; links: { label: string; path: string }[] }) {
   return (
@@ -19,9 +19,9 @@ export function AppLayout({ children, links }: { children: ReactNode; links: { l
       <div className="flex flex-col min-h-screen">
         <AppHeader links={links} />
         <main className="flex-grow container mx-auto p-4">
-          <ChainChecker>
+          <ClusterChecker>
             <div />
-          </ChainChecker>
+          </ClusterChecker>
           {children}
         </main>
         <AppFooter />
@@ -39,7 +39,7 @@ export function AppHeader({ links = [] }: { links: { label: string; path: string
     <header className="relative z-50 px-4 py-2 bg-gray-100 dark:bg-gray-900 dark:text-gray-400">
       <div className="mx-auto flex justify-between items-center">
         <div className="flex items-baseline gap-4">
-          <Link className="text-xl hover:text-gray-500 dark:hover:text-white" href="/">
+          <Link href="/" className="text-xl hover:text-gray-500 dark:hover:text-white">
             <span>Placeholder</span>
           </Link>
           <div className="hidden md:flex items-center">
@@ -47,8 +47,8 @@ export function AppHeader({ links = [] }: { links: { label: string; path: string
               {links.map(({ label, path }) => (
                 <li key={path}>
                   <Link
-                    className={`hover:text-gray-500 dark:hover:text-white ${pathname?.startsWith(path) ? 'text-gray-500 dark:text-white' : ''}`}
                     href={path}
+                    className={`hover:text-gray-500 dark:hover:text-white ${pathname?.startsWith(path) ? 'text-gray-500 dark:text-white' : ''}`}
                   >
                     {label}
                   </Link>
@@ -64,7 +64,7 @@ export function AppHeader({ links = [] }: { links: { label: string; path: string
 
         <div className="hidden md:flex items-center gap-4">
           <ConnectWalletMenu>Connect Wallet</ConnectWalletMenu>
-          <ChainSelect />
+          <ClusterSelect />
           <ThemeSelect />
         </div>
 
@@ -86,7 +86,7 @@ export function AppHeader({ links = [] }: { links: { label: string; path: string
               </ul>
               <div className="flex flex-col gap-4">
                 <ConnectWalletMenu>Connect Wallet</ConnectWalletMenu>
-                <ChainSelect />
+                <ClusterSelect />
                 <ThemeSelect />
               </div>
             </div>

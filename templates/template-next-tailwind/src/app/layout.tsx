@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { AppProviders } from '@/components/app-providers'
 import { AppLayout } from '@/components/app-layout'
+import { ReactNode } from 'react'
 
 export const metadata: Metadata = {
   title: 'Placeholder',
@@ -13,11 +14,7 @@ const links: { label: string; path: string }[] = [
   { label: 'Account', path: '/account' },
 ]
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
