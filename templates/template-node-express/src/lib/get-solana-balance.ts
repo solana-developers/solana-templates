@@ -1,4 +1,4 @@
-import { assertIsAddress } from 'gill'
+import { assertIsAddress, lamportsToSol } from 'gill'
 import { ApiContext } from './get-api-context.js'
 
 export async function getSolanaBalance({ client }: ApiContext, address: string) {
@@ -6,10 +6,10 @@ export async function getSolanaBalance({ client }: ApiContext, address: string) 
   const balance = await client.rpc
     .getBalance(address)
     .send()
-    .then((res) => res.value.toString())
+    .then((res) => res.value)
 
   return {
     address,
-    balance: `${Number(balance) / 10 ** 9} SOL`,
+    balance: `${lamportsToSol(balance)} SOL`,
   }
 }

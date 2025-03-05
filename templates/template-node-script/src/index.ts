@@ -5,7 +5,7 @@ import c from 'kleur'
 import prompts from 'prompts'
 
 // Solana Client SDK
-import { Address, createSolanaClient, getMonikerFromGenesisHash, isAddress } from 'gill'
+import { Address, createSolanaClient, getMonikerFromGenesisHash, isAddress, lamportsToSol } from 'gill'
 // Solana Client SDK (Node.js)
 import { loadKeypairSignerFromFile } from 'gill/node'
 
@@ -22,7 +22,7 @@ const signer = await loadKeypairSignerFromFile(process.env.SOLANA_SIGNER_PATH)
 async function showBalance(address: Address) {
   const balance = await client.rpc.getBalance(address).send()
   console.log(c.gray(`Address : ${c.magenta(address)}`))
-  console.log(c.gray(`Balance : ${c.magenta(Number(balance.value) / 10 ** 9)} SOL`))
+  console.log(c.gray(`Balance : ${c.magenta(lamportsToSol(balance.value))} SOL`))
 }
 
 // Welcome message
