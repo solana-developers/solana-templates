@@ -2,7 +2,7 @@
   "name": "template-node-express",
   "version": "1.0.0",
   "description": "Node.js Express API with the Solana Gill SDK",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "build": "tsc",

@@ -2,7 +2,7 @@
   "name": "template-node-script",
   "version": "1.0.0",
   "description": "Node.js script with the Solana Gill SDK",
-  "main": "index.js",
+  "main": "dist/index.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
