@@ -1,0 +1,18 @@
+.wallet-adapter-dropdown {
+  font-family: inherit !important;
+  @apply text-xs font-medium;
+}
+
+.wallet-adapter-button.wallet-adapter-button-trigger {
+  height: 36px !important;
+  border: 1px solid var(--input);
+  font-size: inherit;
+  color: inherit;
+
+  @apply rounded-md px-2 shadow-xs;
+  @apply dark:bg-background bg-background;
+}
+
+.wallet-adapter-button:not([disabled]):hover {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
