@@ -10,41 +10,41 @@
     "start": "next start"
   },
   "dependencies": {
-    "@radix-ui/react-alert-dialog": "^1.1.6",
-    "@radix-ui/react-avatar": "^1.1.3",
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-dropdown-menu": "^2.1.6",
     "@radix-ui/react-slot": "^1.1.2",
-    "@solana/react": "^2.0.0",
-    "@tanstack/react-query": "^5.66.7",
-    "@wallet-standard/core": "^1.1.0",
-    "@wallet-standard/react": "^1.0.0",
-    "@wallet-ui/core": "1.1.0-canary-20250302003059",
-    "@wallet-ui/react": "1.1.0-canary-20250302003059",
+    "@wallet-ui/react": "canary",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "framer-motion": "^12.4.5",
-    "gill": "0.7.0",
-    "lucide-react": "^0.475.0",
-    "next": "15.2.0-canary.65",
-    "next-themes": "^0.4.4",
+    "lucide-react": "^0.479.0",
+    "next": "15.2.2",
+    "next-themes": "^0.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-error-boundary": "^5.0.0",
-    "sonner": "^2.0.0",
-    "tailwind-merge": "^3.0.1",
+    "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7",
     "ws": "^8.18.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@tailwindcss/postcss": "^4.0.7",
-    "@types/node": "^22.13.4",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "eslint": "^9.20.1",
-    "eslint-config-next": "15.2.0-canary.65",
-    "tailwindcss": "^4.0.7",
-    "typescript": "^5.7.3"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.2",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "create-solana-dapp": {
+    "rename": {
+      "scaffold": {
+        "to": "{{name}}",
+        "paths": [
+          "src"
+        ]
+      }
+    }
   }
 }

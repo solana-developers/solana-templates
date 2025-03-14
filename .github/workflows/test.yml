@@ -17,15 +17,15 @@ jobs:
       matrix:
         node: [20, 22]
         pm: [npm, pnpm, yarn]
-        template: [
+        template:
+          [
             templates/legacy-next-tailwind,
             templates/legacy-next-tailwind-basic,
             templates/legacy-next-tailwind-counter,
             templates/legacy-react-vite-tailwind,
             templates/legacy-react-vite-tailwind-basic,
             templates/legacy-react-vite-tailwind-counter,
-            # TODO: enable this template when this weeks dependency hell is over
-            #            template-next-tailwind,
+            templates/template-next-tailwind,
             templates/template-node-express,
             templates/template-node-script,
           ]

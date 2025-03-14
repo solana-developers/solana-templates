@@ -1,0 +1,202 @@
+@import '../app/globals.css';
+
+.wallet-ui-debug {
+  border: 1px solid red;
+}
+
+.wallet-menu {
+  position: relative;
+}
+
+.wallet-trigger {
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: space-between;*/
+  /*background-color: #333;*/
+  /*color: white;*/
+  /*border: 1px solid #555;*/
+  /*border-radius: 4px;*/
+  /*padding: 8px 12px;*/
+  /*cursor: pointer;*/
+  /*min-width: 160px;*/
+  @apply shadow-xs;
+  @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium  disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none;
+}
+
+.wallet-trigger:hover {
+  /*background-color: #444;*/
+}
+
+.wallet-trigger.connected {
+  /*background-color: #2a2a2a;*/
+}
+
+.wallet-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+}
+
+.disconnect-icon {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.disconnect-icon:hover {
+  opacity: 1;
+  color: #ff5555;
+}
+
+.indicator {
+  transition: transform 0.2s;
+}
+
+.wallet-positioner {
+  position: absolute;
+  z-index: 10;
+  margin-top: 4px;
+  min-width: 100%;
+}
+
+.wallet-content {
+  @apply bg-background dark:bg-background;
+  /*background-color: bg-background;*/
+  /*background-color: #303030;*/
+  border: 1px solid #555;
+  border-radius: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  min-width: 180px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wallet-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.wallet-item:hover {
+  background-color: #444;
+}
+
+[data-part='trigger'][data-state='open'] .indicator {
+  transform: rotate(180deg);
+}
+
+[data-part='item'][data-highlighted] {
+  background-color: #4a4a4a;
+}
+
+[data-part='item'][data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+html {
+  --colors-bg-subtle: #ffffff;
+  --colors-bg-bold: #edf2f7;
+  --colors-bg-primary-subtle: #38a169;
+  --colors-bg-primary-bold: #2f855a;
+  --colors-bg-secondary-subtle: #000000;
+  --colors-bg-secondary-bold: #2d3748;
+  --colors-bg-tertiary-bold: #c6f6d5;
+  --colors-bg-tertiary-subtle: #f0fff4;
+  --colors-bg-code-block: hsl(230, 1%, 98%);
+  --colors-bg-code-inline: rgba(0, 0, 0, 0.04);
+  --colors-bg-header: rgba(255, 255, 255, 0.92);
+  --colors-bg-badge: #feebc8;
+  --colors-text-bold: #171923;
+  --colors-text-subtle: #4a5568;
+  --colors-text-primary-bold: #38a169;
+  --colors-text-inverse: #ffffff;
+  --colors-text-primary-subtle: #2f855a;
+  --colors-text-badge: #c05621;
+  --colors-border-subtle: #edf2f7;
+  --colors-border-bold: #e2e8f0;
+  --colors-border-primary-subtle: #38a169;
+  --colors-border-primary-bold: #2f855a;
+}
+
+.dialog {
+  &[data-scope='dialog'][data-part='trigger'],
+  &[data-scope='dialog'][data-part='description'] + div > button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    cursor: pointer;
+    font-weight: 500;
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    background: var(--colors-bg-primary-subtle);
+    color: #ffffff;
+  }
+
+  &[data-scope='dialog'][data-part='description'] + div > button:hover {
+    background: var(--colors-bg-primary-bold);
+  }
+
+  &[data-scope='dialog'][data-part='backdrop'] {
+    position: fixed;
+    inset: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1400;
+  }
+
+  &[data-scope='dialog'][data-part='positioner'] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1400;
+    inset: 0px;
+  }
+
+  &[data-scope='dialog'][data-part='content'] {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 0.375rem;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.25rem;
+    position: relative;
+    border: 1px solid var(--colors-border-subtle);
+    pointer-events: auto;
+  }
+
+  &[data-scope='dialog'][data-part='title'] {
+    font-weight: 500;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &[data-scope='dialog'][data-part='description'] {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &[data-scope='dialog'][data-part='description'] + div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  &[data-scope='dialog'][data-part='description'] + div > input {
+    flex: 1;
+    font-size: 0.875rem;
+    border-width: 1px;
+    padding-inline: 0.5rem;
+    padding-block: 0.25rem;
+  }
+
+  &[data-scope='dialog'][data-part='close-trigger'] {
+    display: flex;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}

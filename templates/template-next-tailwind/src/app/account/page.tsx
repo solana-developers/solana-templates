@@ -1,5 +1,5 @@
-import AccountListFeature from '@/components/account/account-list-feature'
+import AccountIndexFeature from '@/components/account/account-index-feature'
 
 export default function AccountPage() {
-  return <AccountListFeature />
+  return <AccountIndexFeature />
 }
