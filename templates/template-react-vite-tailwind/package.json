@@ -3,7 +3,6 @@
   "description": "React+Vite, Tailwind, gill (based on @solana/kit), Wallet UI",
   "keywords": [
     "gill",
-    "legacy",
     "react",
     "solana-kit",
     "tailwind",

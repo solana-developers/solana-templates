@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "update-deps": "pnpm -r update --latest",
     "update-template-readmes": "npx esrun ./scripts/create-template-readme.ts",
-    "update-readme": "pnpm update-template-readmes && automd"
+    "update-readme": "pnpm update-template-readmes && automd && prettier --write {README.md,**/README.md,templates.json}"
   },
   "keywords": [],
   "author": "Solana Developers",
@@ -19,5 +19,17 @@
     "automd": "^0.4.0",
     "esrun": "^3.2.26",
     "prettier": "^3.5.3"
-  }
+  },
+  "templateGroups": [
+    {
+      "description": "Templates using gill (based on @solana/kit)",
+      "directory": "templates",
+      "name": "Templates"
+    },
+    {
+      "description": "Legacy templates using @solana/web3.js",
+      "directory": "legacy",
+      "name": "Legacy Templates"
+    }
+  ]
 }

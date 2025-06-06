@@ -1,0 +1,112 @@
+[
+  {
+    "description": "Templates using gill (based on @solana/kit)",
+    "directory": "templates",
+    "name": "Templates",
+    "templates": [
+      {
+        "description": "Next.js, Tailwind, gill (based on @solana/kit), Wallet UI",
+        "keywords": ["gill", "nextjs", "react", "solana-kit", "tailwind", "typescript", "wallet-ui"],
+        "name": "template-next-tailwind",
+        "path": "templates/template-next-tailwind"
+      },
+      {
+        "description": "Node.js Express API with gill (based on @solana/kit)",
+        "keywords": ["express", "gill", "node", "solana-kit"],
+        "name": "template-node-express",
+        "path": "templates/template-node-express"
+      },
+      {
+        "description": "Node.js script with gill (based on @solana/kit)",
+        "keywords": ["gill", "node", "solana-kit"],
+        "name": "template-node-script",
+        "path": "templates/template-node-script"
+      },
+      {
+        "description": "React+Vite, Tailwind, gill (based on @solana/kit), Wallet UI",
+        "keywords": ["gill", "react", "solana-kit", "tailwind", "typescript", "vite", "wallet-ui"],
+        "name": "template-react-vite-tailwind",
+        "path": "templates/template-react-vite-tailwind"
+      }
+    ]
+  },
+  {
+    "description": "Legacy templates using @solana/web3.js",
+    "directory": "legacy",
+    "name": "Legacy Templates",
+    "templates": [
+      {
+        "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter",
+        "keywords": ["legacy", "nextjs", "react", "solana-web3js", "tailwind", "typescript", "wallet-adapter"],
+        "name": "legacy-next-tailwind",
+        "path": "legacy/legacy-next-tailwind"
+      },
+      {
+        "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter, basic Anchor program",
+        "keywords": [
+          "anchor-basic",
+          "legacy",
+          "nextjs",
+          "react",
+          "solana-web3js",
+          "tailwind",
+          "typescript",
+          "wallet-adapter"
+        ],
+        "name": "legacy-next-tailwind-basic",
+        "path": "legacy/legacy-next-tailwind-basic"
+      },
+      {
+        "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter, Anchor Counter program",
+        "keywords": [
+          "anchor-counter",
+          "legacy",
+          "nextjs",
+          "react",
+          "solana-web3js",
+          "tailwind",
+          "typescript",
+          "wallet-adapter"
+        ],
+        "name": "legacy-next-tailwind-counter",
+        "path": "legacy/legacy-next-tailwind-counter"
+      },
+      {
+        "description": "React + Vite, Tailwind, @solana/web3.js, Wallet Adapter",
+        "keywords": ["legacy", "react", "solana-web3js", "tailwind", "typescript", "vite", "wallet-adapter"],
+        "name": "legacy-react-vite-tailwind",
+        "path": "legacy/legacy-react-vite-tailwind"
+      },
+      {
+        "description": "React + Vite, Tailwind, @solana/web3.js, Wallet Adapter, basic Anchor program",
+        "keywords": [
+          "anchor-basic",
+          "legacy",
+          "react",
+          "solana-web3js",
+          "tailwind",
+          "typescript",
+          "vite",
+          "wallet-adapter"
+        ],
+        "name": "legacy-react-vite-tailwind",
+        "path": "legacy/legacy-react-vite-tailwind-basic"
+      },
+      {
+        "description": "React + Vite, Tailwind, @solana/web3.js, Wallet Adapter, Anchor Counter program",
+        "keywords": [
+          "anchor-counter",
+          "legacy",
+          "react",
+          "solana-web3js",
+          "tailwind",
+          "typescript",
+          "vite",
+          "wallet-adapter"
+        ],
+        "name": "legacy-react-vite-tailwind",
+        "path": "legacy/legacy-react-vite-tailwind-counter"
+      }
+    ]
+  }
+]
