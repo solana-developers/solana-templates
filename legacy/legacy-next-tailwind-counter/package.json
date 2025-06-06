@@ -1,5 +1,16 @@
 {
   "name": "legacy-next-tailwind-counter",
+  "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter, Anchor Counter program",
+  "keywords": [
+    "anchor-counter",
+    "legacy",
+    "nextjs",
+    "react",
+    "solana-web3js",
+    "tailwind",
+    "typescript",
+    "wallet-adapter"
+  ],
   "version": "0.0.0",
   "private": true,
   "scripts": {

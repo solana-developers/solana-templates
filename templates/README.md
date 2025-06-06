@@ -1,0 +1,27 @@
+# Templates
+
+Templates using gill (based on @solana/kit)
+
+### template-next-tailwind
+
+> Next.js, Tailwind, gill (based on @solana/kit), Wallet UI
+
+`gill` `nextjs` `react` `solana-kit` `tailwind` `typescript` `wallet-ui`
+
+### template-node-express
+
+> Node.js Express API with gill (based on @solana/kit)
+
+`express` `gill` `node` `solana-kit`
+
+### template-node-script
+
+> Node.js script with gill (based on @solana/kit)
+
+`gill` `node` `solana-kit`
+
+### template-react-vite-tailwind
+
+> React+Vite, Tailwind, gill (based on @solana/kit), Wallet UI
+
+`gill` `react` `solana-kit` `tailwind` `typescript` `vite` `wallet-ui`
