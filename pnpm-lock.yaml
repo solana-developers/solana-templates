@@ -814,6 +814,118 @@ importers:
         specifier: ^8.18.2
         version: 8.18.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
 
+  templates/template-next-tailwind-basic:
+    dependencies:
+      '@codama/nodes-from-anchor':
+        specifier: ^1.2.0
+        version: 1.2.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@codama/renderers-js':
+        specifier: ^1.2.14
+        version: 1.2.14(chokidar@3.6.0)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      '@radix-ui/react-dialog':
+        specifier: ^1.1.14
+        version: 1.1.14(@types/react-dom@19.1.6(@types/react@19.1.6))(@types/react@19.1.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@radix-ui/react-dropdown-menu':
+        specifier: ^2.1.15
+        version: 2.1.15(@types/react-dom@19.1.6(@types/react@19.1.6))(@types/react@19.1.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@radix-ui/react-label':
+        specifier: ^2.1.7
+        version: 2.1.7(@types/react-dom@19.1.6(@types/react@19.1.6))(@types/react@19.1.6)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@radix-ui/react-slot':
+        specifier: ^1.2.3
+        version: 1.2.3(@types/react@19.1.6)(react@19.1.0)
+      '@solana/kit':
+        specifier: ^2.1.1
+        version: 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      '@tanstack/react-query':
+        specifier: ^5.80.6
+        version: 5.80.6(react@19.1.0)
+      '@wallet-ui/react':
+        specifier: 1.1.0-canary-20250605143849
+        version: 1.1.0-canary-20250605143849(fastestsmallesttextencoderdecoder@1.0.22)(gill@0.9.1(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+      '@wallet-ui/tailwind':
+        specifier: 1.1.0-canary-20250605143849
+        version: 1.1.0-canary-20250605143849(tailwindcss@4.1.8)
+      class-variance-authority:
+        specifier: ^0.7.1
+        version: 0.7.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      codama:
+        specifier: ^1.3.0
+        version: 1.3.0
+      gill:
+        specifier: ^0.9.1
+        version: 0.9.1(@solana/sysvars@2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3))(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(ws@8.18.2(bufferutil@4.0.9)(utf-8-validate@5.0.10))
+      jotai:
+        specifier: ^2.12.5
+        version: 2.12.5(@types/react@19.1.6)(react@19.1.0)
+      lucide-react:
+        specifier: ^0.513.0
+        version: 0.513.0(react@19.1.0)
+      next:
+        specifier: 15.3.3
+        version: 15.3.3(@babel/core@7.27.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      next-themes:
+        specifier: ^0.4.6
+        version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      react:
+        specifier: ^19.1.0
+        version: 19.1.0
+      react-dom:
+        specifier: ^19.1.0
+        version: 19.1.0(react@19.1.0)
+      react-error-boundary:
+        specifier: ^6.0.0
+        version: 6.0.0(react@19.1.0)
+      sonner:
+        specifier: ^2.0.5
+        version: 2.0.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      tailwind-merge:
+        specifier: ^3.3.0
+        version: 3.3.0
+      tw-animate-css:
+        specifier: ^1.3.4
+        version: 1.3.4
+    devDependencies:
+      '@eslint/eslintrc':
+        specifier: ^3.3.1
+        version: 3.3.1
+      '@tailwindcss/postcss':
+        specifier: ^4.1.8
+        version: 4.1.8
+      '@types/node':
+        specifier: ^22.15.30
+        version: 22.15.30
+      '@types/react':
+        specifier: ^19.1.6
+        version: 19.1.6
+      '@types/react-dom':
+        specifier: ^19.1.6
+        version: 19.1.6(@types/react@19.1.6)
+      eslint:
+        specifier: ^9.28.0
+        version: 9.28.0(jiti@2.4.2)
+      eslint-config-next:
+        specifier: 15.3.3
+        version: 15.3.3(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.3)
+      esrun:
+        specifier: ^3.2.30
+        version: 3.2.30
+      prettier:
+        specifier: ^3.5.3
+        version: 3.5.3
+      tailwindcss:
+        specifier: ^4.1.8
+        version: 4.1.8
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+      ws:
+        specifier: ^8.18.2
+        version: 8.18.2(bufferutil@4.0.9)(utf-8-validate@5.0.10)
+
   templates/template-node-express:
     dependencies:
       '@types/cors':
@@ -1707,6 +1819,34 @@ packages:
 
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  '@codama/errors@1.3.0':
+    resolution: {integrity: sha512-pYp/gOi1c/9btrybWvH2iK5jj7SOpMmyLm9EqbxrivV+lqzfEogU8IG+BLch9sqnuhPgg/PzCaB4sYd438UC/Q==}
+    hasBin: true
+
+  '@codama/node-types@1.3.0':
+    resolution: {integrity: sha512-3dPbMXR/QgKUqXMMxc6PUi2f8Dq6eZ9P/v6+ChTQFLGhSQmqC1PsCbL77PuM7mf4IK9np1RXFqbC/EVpgLvbgA==}
+
+  '@codama/nodes-from-anchor@1.2.0':
+    resolution: {integrity: sha512-IiIgNnqxXAu1Qk37tdVx7zq1aqZuqRYyfq4ef+31ktaOyH+bsZex9eA0mzwkAow2Nhgj8d5N6qg+i7pwey7B3A==}
+
+  '@codama/nodes@1.3.0':
+    resolution: {integrity: sha512-Spf+Whm4jBLFxGPtJuDGmteGe+avoIDnh6rsByU1iJlYmcJJLjZayexFkvW8+1IeDclUMPQYBSj6SjuQEItLqQ==}
+
+  '@codama/renderers-core@1.0.16':
+    resolution: {integrity: sha512-IJshH6JsX7GUaYmC6KlOd5pLLyW1Yqd0I8B0pVWvvv9BfPNosC4t4RfusHSkYQePkIvs7CJ7YlwUywwW36Vt8A==}
+
+  '@codama/renderers-js@1.2.14':
+    resolution: {integrity: sha512-KukxwlX5iJpMBMRsiVY6vrmMipw8MbgHdNO3WFkNV1hO2F/ykhZfdHtZVEVL0Z/dNCBNfExLpign00teneCIoA==}
+
+  '@codama/validators@1.3.0':
+    resolution: {integrity: sha512-s6rG3fJSvS7zc+fQ5yJN1NHlGQiut+P3Bpi5sQcEikjdWDDezu4OOgkxTh8ksTsCu8Rsif2hVzFYDLMcKjNrag==}
+
+  '@codama/visitors-core@1.3.0':
+    resolution: {integrity: sha512-Lldy0aOc882QYDa1IhjXhwpDsQE7oirBaebRddggXYFQs4+cvFROibHXBqG2npHPvQM4Mot6dJHQqffB/QL4iQ==}
+
+  '@codama/visitors@1.3.0':
+    resolution: {integrity: sha512-xcFae6NwC6Omr9tDm6P8rF3IDm5jWe2VMPomixaAc7+mpRhAWLbsg+FYCi0E09NvADo4C1tGo8U/SsvZLATUsQ==}
 
   '@coral-xyz/anchor-errors@0.31.1':
     resolution: {integrity: sha512-NhNEku4F3zzUSBtrYz84FzYWm48+9OvmT1Hhnwr6GnPQry2dsEqH/ti/7ASjjpoFTWRnPXrjAIT1qM6Isop+LQ==}
@@ -3829,6 +3969,9 @@ packages:
   '@zag-js/utils@1.12.0':
     resolution: {integrity: sha512-PapS6VDeQtlWyZg3gC4pIY0++2OCAzqrnlRiB7IhEyOYsqi5MiAs+TKVDFXU+eUM77aR8pgtXo10yvdnNw6b+A==}
 
+  a-sync-waterfall@1.0.1:
+    resolution: {integrity: sha512-RYTOHHdWipFUliRFMCS4X2Yn2X8M87V/OpSqWzKKOGhzqyUxzyVmhHDH9sAvG+ZuQf/TAOFsLCpMw09I1ufUnA==}
+
   abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
     engines: {node: '>=6.5'}
@@ -4241,6 +4384,9 @@ packages:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
 
+  codama@1.3.0:
+    resolution: {integrity: sha512-rqnD0DRq7H3yJce3nDU1Kdy3Y/TsC/GirS4VazG7AEJ5UbR0fGIoThWWOpl2d5J1JmsaheY7APCY4PpnEZBoJA==}
+
   collect-v8-coverage@1.0.2:
     resolution: {integrity: sha512-lHl4d5/ONEbLlJvaJNtsF/Lz+WvB07u2ycqTYbdrq7UypDXailES4valYb2eWiJFxZlVmpGekfqoxQhzyFdT4Q==}
 
@@ -4268,6 +4414,10 @@ packages:
 
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
+
+  commander@5.1.0:
+    resolution: {integrity: sha512-P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==}
+    engines: {node: '>= 6'}
 
   commondir@1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
@@ -5517,6 +5667,10 @@ packages:
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
 
+  json-stable-stringify@1.3.0:
+    resolution: {integrity: sha512-qtYiSSFlwot9XHtF9bD9c7rwKjr+RecWT//ZnPvSmEjpV5mmPOCN4j8UjY5hbjNkOwZ/jQv3J6R1/pL7RwgMsg==}
+    engines: {node: '>= 0.4'}
+
   json-stringify-safe@5.0.1:
     resolution: {integrity: sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==}
 
@@ -5528,6 +5682,9 @@ packages:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
     hasBin: true
+
+  jsonify@0.0.1:
+    resolution: {integrity: sha512-2/Ki0GcmuqSrgFyelQq9M05y7PS0mEwuIzrf3f1fPqkVDVRvZrPZtVSMHxdgo8Aq0sxAOb/cr2aqqA3LeWHVPg==}
 
   jsx-ast-utils@3.3.5:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}
@@ -5956,6 +6113,16 @@ packages:
 
   nullthrows@1.1.1:
     resolution: {integrity: sha512-2vPPEi+Z7WqML2jZYddDIfy5Dqb0r2fze2zTxNNknZaFpVHU3mFB3R+DWeJWGVx0ecvttSGlJTI+WG+8Z4cDWw==}
+
+  nunjucks@3.2.4:
+    resolution: {integrity: sha512-26XRV6BhkgK0VOxfbU5cQI+ICFUtMLixv1noZn1tGU38kQH5A5nmmbk/O45xdyBhD1esk47nKrY0mvQpZIhRjQ==}
+    engines: {node: '>= 6.9.0'}
+    hasBin: true
+    peerDependencies:
+      chokidar: ^3.3.0
+    peerDependenciesMeta:
+      chokidar:
+        optional: true
 
   ob1@0.81.5:
     resolution: {integrity: sha512-iNpbeXPLmaiT9I5g16gFFFjsF3sGxLpYG2EGP3dfFB4z+l9X60mp/yRzStHhMtuNt8qmf7Ww80nOPQHngHhnIQ==}
@@ -8065,6 +8232,68 @@ snapshots:
       '@babel/helper-validator-identifier': 7.27.1
 
   '@bcoe/v8-coverage@0.2.3': {}
+
+  '@codama/errors@1.3.0':
+    dependencies:
+      '@codama/node-types': 1.3.0
+      chalk: 5.4.1
+      commander: 13.1.0
+
+  '@codama/node-types@1.3.0': {}
+
+  '@codama/nodes-from-anchor@1.2.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@codama/errors': 1.3.0
+      '@codama/nodes': 1.3.0
+      '@codama/visitors': 1.3.0
+      '@noble/hashes': 1.8.0
+      '@solana/codecs': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+    transitivePeerDependencies:
+      - fastestsmallesttextencoderdecoder
+      - typescript
+
+  '@codama/nodes@1.3.0':
+    dependencies:
+      '@codama/errors': 1.3.0
+      '@codama/node-types': 1.3.0
+
+  '@codama/renderers-core@1.0.16':
+    dependencies:
+      '@codama/errors': 1.3.0
+      '@codama/nodes': 1.3.0
+      '@codama/visitors-core': 1.3.0
+
+  '@codama/renderers-js@1.2.14(chokidar@3.6.0)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)':
+    dependencies:
+      '@codama/errors': 1.3.0
+      '@codama/nodes': 1.3.0
+      '@codama/renderers-core': 1.0.16
+      '@codama/visitors-core': 1.3.0
+      '@solana/codecs-strings': 2.1.1(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)
+      nunjucks: 3.2.4(chokidar@3.6.0)
+      prettier: 3.5.3
+    transitivePeerDependencies:
+      - chokidar
+      - fastestsmallesttextencoderdecoder
+      - typescript
+
+  '@codama/validators@1.3.0':
+    dependencies:
+      '@codama/errors': 1.3.0
+      '@codama/nodes': 1.3.0
+      '@codama/visitors-core': 1.3.0
+
+  '@codama/visitors-core@1.3.0':
+    dependencies:
+      '@codama/errors': 1.3.0
+      '@codama/nodes': 1.3.0
+      json-stable-stringify: 1.3.0
+
+  '@codama/visitors@1.3.0':
+    dependencies:
+      '@codama/errors': 1.3.0
+      '@codama/nodes': 1.3.0
+      '@codama/visitors-core': 1.3.0
 
   '@coral-xyz/anchor-errors@0.31.1': {}
 
@@ -10457,6 +10686,8 @@ snapshots:
 
   '@zag-js/utils@1.12.0': {}
 
+  a-sync-waterfall@1.0.1: {}
+
   abort-controller@3.0.0:
     dependencies:
       event-target-shim: 5.0.1
@@ -10990,6 +11221,13 @@ snapshots:
 
   co@4.6.0: {}
 
+  codama@1.3.0:
+    dependencies:
+      '@codama/errors': 1.3.0
+      '@codama/nodes': 1.3.0
+      '@codama/validators': 1.3.0
+      '@codama/visitors': 1.3.0
+
   collect-v8-coverage@1.0.2: {}
 
   color-convert@2.0.1:
@@ -11015,6 +11253,8 @@ snapshots:
   commander@13.1.0: {}
 
   commander@2.20.3: {}
+
+  commander@5.1.0: {}
 
   commondir@1.0.1: {}
 
@@ -12703,6 +12943,14 @@ snapshots:
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
+  json-stable-stringify@1.3.0:
+    dependencies:
+      call-bind: 1.0.8
+      call-bound: 1.0.4
+      isarray: 2.0.5
+      jsonify: 0.0.1
+      object-keys: 1.1.1
+
   json-stringify-safe@5.0.1: {}
 
   json5@1.0.2:
@@ -12710,6 +12958,8 @@ snapshots:
       minimist: 1.2.8
 
   json5@2.2.3: {}
+
+  jsonify@0.0.1: {}
 
   jsx-ast-utils@3.3.5:
     dependencies:
@@ -13204,6 +13454,14 @@ snapshots:
       path-key: 3.1.1
 
   nullthrows@1.1.1: {}
+
+  nunjucks@3.2.4(chokidar@3.6.0):
+    dependencies:
+      a-sync-waterfall: 1.0.1
+      asap: 2.0.6
+      commander: 5.1.0
+    optionalDependencies:
+      chokidar: 3.6.0
 
   ob1@0.81.5:
     dependencies:
