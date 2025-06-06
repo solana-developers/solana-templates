@@ -7,12 +7,17 @@
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules",
     "fmt": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "update-deps": "pnpm -r update --latest"
+    "update-deps": "pnpm -r update --latest",
+    "update-template-readmes": "npx esrun ./scripts/create-template-readme.ts",
+    "update-readme": "pnpm update-template-readmes && automd"
   },
   "keywords": [],
   "author": "Solana Developers",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^22.15.29",
+    "automd": "^0.4.0",
+    "esrun": "^3.2.26",
     "prettier": "^3.5.3"
   }
 }

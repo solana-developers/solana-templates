@@ -1,7 +1,12 @@
 {
   "name": "template-node-script",
   "version": "1.0.0",
-  "description": "Node.js script with the Solana Gill SDK",
+  "description": "Node.js script with gill (based on @solana/kit)",
+  "keywords": [
+    "gill",
+    "node",
+    "solana-kit"
+  ],
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
@@ -14,7 +19,6 @@
     "start": "cross-env NODE_OPTIONS=--disable-warning=ExperimentalWarning esrun src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.28.0",

@@ -1,5 +1,16 @@
 {
   "name": "template-react-vite-tailwind",
+  "description": "React+Vite, Tailwind, gill (based on @solana/kit), Wallet UI",
+  "keywords": [
+    "gill",
+    "legacy",
+    "react",
+    "solana-kit",
+    "tailwind",
+    "typescript",
+    "vite",
+    "wallet-ui"
+  ],
   "version": "0.0.0",
   "private": true,
   "type": "module",

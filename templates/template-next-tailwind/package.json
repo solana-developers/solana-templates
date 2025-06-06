@@ -1,5 +1,16 @@
 {
   "name": "template-next-tailwind",
+  "description": "Next.js, Tailwind, gill (based on @solana/kit), Wallet UI",
+  "keywords": [
+    "gill",
+    "legacy",
+    "nextjs",
+    "react",
+    "solana-kit",
+    "tailwind",
+    "typescript",
+    "wallet-ui"
+  ],
   "version": "0.0.0",
   "private": true,
   "scripts": {
