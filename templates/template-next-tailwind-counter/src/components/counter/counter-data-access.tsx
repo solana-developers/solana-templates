@@ -17,6 +17,10 @@ import { useWalletTransactionSignAndSend } from '../solana/use-wallet-transactio
 import { useClusterVersion } from '@/components/cluster/use-cluster-version'
 import { toastTx } from '@/components/toast-tx'
 import { useWalletUiSigner } from '@/components/solana/use-wallet-ui-signer'
+import { install as installEd25519 } from '@solana/webcrypto-ed25519-polyfill'
+
+// polyfill ed25519 for browsers (to allow `generateKeyPairSigner` to work)
+installEd25519()
 
 export function useCounterProgramId() {
   const { cluster } = useWalletUi()
