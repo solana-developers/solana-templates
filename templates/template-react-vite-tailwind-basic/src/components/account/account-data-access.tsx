@@ -3,22 +3,13 @@ import { getTransferSolInstruction } from 'gill/programs'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useWalletUi } from '@wallet-ui/react'
 import {
-  address,
-  Address,
   airdropFactory,
-  appendTransactionMessageInstruction,
-  assertIsTransactionMessageWithSingleSendingSigner,
-  Blockhash,
-  createTransactionMessage,
+  createTransaction,
   getBase58Decoder,
   lamports,
-  pipe,
-  setTransactionMessageFeePayerSigner,
-  setTransactionMessageLifetimeUsingBlockhash,
   signAndSendTransactionMessageWithSigners,
-  SolanaClient,
-  TransactionSendingSigner,
 } from 'gill'
+import type { Address, SolanaClient } from 'gill'
 import { toast } from 'sonner'
 import { toastTx } from '@/components/toast-tx'
 import { useWalletUiSigner } from '@/components/solana/use-wallet-ui-signer'
@@ -95,19 +86,30 @@ export function useGetTokenAccountsQuery({ address }: { address: Address }) {
 
 export function useTransferSolMutation({ address }: { address: Address }) {
   const { client } = useWalletUi()
-  const txSigner = useWalletUiSigner()
+  const signer = useWalletUiSigner()
   const invalidateBalanceQuery = useInvalidateGetBalanceQuery({ address })
   const invalidateSignaturesQuery = useInvalidateGetSignaturesQuery({ address })
 
   return useMutation({
     mutationFn: async (input: { destination: Address; amount: number }) => {
       try {
-        const { signature } = await createTransaction({
-          txSigner,
-          destination: input.destination,
-          amount: input.amount,
-          client,
+        const { value: latestBlockhash } = await client.rpc.getLatestBlockhash({ commitment: 'confirmed' }).send()
+
+        const transaction = createTransaction({
+          feePayer: signer,
+          version: 0,
+          latestBlockhash,
+          instructions: [
+            getTransferSolInstruction({
+              amount: input.amount,
+              destination: input.destination,
+              source: signer,
+            }),
+          ],
         })
+
+        const signatureBytes = await signAndSendTransactionMessageWithSigners(transaction)
+        const signature = getBase58Decoder().decode(signatureBytes)
 
         console.log(signature)
         return signature
@@ -145,47 +147,4 @@ export function useRequestAirdropMutation({ address }: { address: Address }) {
       await Promise.all([invalidateBalanceQuery(), invalidateSignaturesQuery()])
     },
   })
-}
-
-async function createTransaction({
-  amount,
-  destination,
-  client,
-  txSigner,
-}: {
-  amount: number
-  destination: Address
-  client: SolanaClient
-  txSigner: TransactionSendingSigner
-}): Promise<{
-  signature: string
-  latestBlockhash: {
-    blockhash: Blockhash
-    lastValidBlockHeight: bigint
-  }
-}> {
-  const { value: latestBlockhash } = await client.rpc.getLatestBlockhash({ commitment: 'confirmed' }).send()
-
-  const message = pipe(
-    createTransactionMessage({ version: 0 }),
-    (m) => setTransactionMessageFeePayerSigner(txSigner, m),
-    (m) => setTransactionMessageLifetimeUsingBlockhash(latestBlockhash, m),
-    (m) =>
-      appendTransactionMessageInstruction(
-        getTransferSolInstruction({
-          amount,
-          destination: address(destination),
-          source: txSigner,
-        }),
-        m,
-      ),
-  )
-  assertIsTransactionMessageWithSingleSendingSigner(message)
-
-  const signature = await signAndSendTransactionMessageWithSigners(message)
-
-  return {
-    signature: getBase58Decoder().decode(signature),
-    latestBlockhash,
-  }
 }
