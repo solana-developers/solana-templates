@@ -39,11 +39,10 @@
   "scripts": {
     "anchor": "cd anchor && anchor",
     "anchor-build": "cd anchor && anchor build",
-    "anchor-client": "esrun ./anchor/src/generate-client.ts",
     "anchor-localnet": "cd anchor && anchor localnet",
     "anchor-test": "cd anchor && anchor test",
     "build": "tsc -b && vite build",
-    "codama:js": "codama run -c ./anchor/codama.js js",
+    "codama:js": "codama run js -c ./anchor/codama.js",
     "ci": "npm run build && npm run lint && npm run format:check",
     "dev": "vite",
     "format": "prettier --write .",
@@ -53,7 +52,6 @@
     "setup": "npm run anchor keys sync && npm run codama:js"
   },
   "dependencies": {
-    "@codama/cli": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-label": "^2.1.7",
@@ -79,6 +77,7 @@
     "ws": "^8.18.2"
   },
   "devDependencies": {
+    "@codama/cli": "^1.1.1",
     "@eslint/js": "^9.29.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.3",
