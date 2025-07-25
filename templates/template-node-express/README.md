@@ -8,8 +8,8 @@ based on [@solana/kit](https://github.com/anza-xyz/kit).
 Clone the repo:
 
 ```shell
-git clone https://github.com/solana-developers/solana-templates
-cd solana-templates/template-node-express
+git clone https://github.com/solana-foundation/templates
+cd templates/templates/template-node-express
 ```
 
 Install dependencies:

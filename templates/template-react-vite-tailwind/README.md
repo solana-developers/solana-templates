@@ -12,7 +12,7 @@ This is a Vite app containing:
 #### Download the template
 
 ```shell
-pnpm create solana-dapp@latest -t gh:solana-developers/solana-templates/templates/template-react-vite-tailwind
+pnpm create solana-dapp@latest -t gh:solana-foundation/templates/templates/template-react-vite-tailwind
 ```
 
 #### Install Dependencies

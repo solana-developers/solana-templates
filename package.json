@@ -1,5 +1,5 @@
 {
-  "name": "solana-templates",
+  "name": "templates",
   "version": "1.0.0",
   "description": "Solana Templates for create-solana-dapp",
   "main": "index.js",
@@ -35,8 +35,8 @@
     ]
   },
   "repository": {
-    "name": "solana-developers/solana-templates",
+    "name": "solana-foundation/templates",
     "type": "git",
-    "url": "https://github.com/solana-developers/solana-templates"
+    "url": "https://github.com/solana-foundation/templates"
   }
 }
