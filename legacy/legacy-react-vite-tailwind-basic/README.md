@@ -14,7 +14,7 @@ This is a Vite app containing:
 #### Download the template
 
 ```shell
-pnpm create solana-dapp@latest -t gh:solana-developers/solana-templates/legacy/legacy-react-vite-tailwind-basic
+pnpm create solana-dapp@latest -t gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind-basic
 ```
 
 #### Install Dependencies
@@ -31,11 +31,13 @@ This is a Solana program written in Rust using the Anchor framework.
 
 #### Commands
 
-You can use any normal anchor commands. Either move to the `anchor` directory and run the `anchor` command or prefix the command with `pnpm`, eg: `pnpm anchor`.
+You can use any normal anchor commands. Either move to the `anchor` directory and run the `anchor` command or prefix the
+command with `pnpm`, eg: `pnpm anchor`.
 
 #### Sync the program id:
 
-Running this command will create a new keypair in the `anchor/target/deploy` directory and save the address to the Anchor config file and update the `declare_id!` macro in the `./src/lib.rs` file of the program.
+Running this command will create a new keypair in the `anchor/target/deploy` directory and save the address to the
+Anchor config file and update the `declare_id!` macro in the `./src/lib.rs` file of the program.
 
 You will manually need to update the constant in `anchor/lib/counter-exports.ts` to match the new program id.
 

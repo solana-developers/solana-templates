@@ -6,56 +6,56 @@
     "templates": [
       {
         "description": "Next.js, Tailwind, gill (based on @solana/kit), Wallet UI",
-        "id": "gh:solana-developers/solana-templates/templates/template-next-tailwind",
+        "id": "gh:solana-foundation/templates/templates/template-next-tailwind",
         "keywords": ["gill", "nextjs", "react", "solana-kit", "tailwind", "typescript", "wallet-ui"],
         "name": "template-next-tailwind",
         "path": "templates/template-next-tailwind"
       },
       {
         "description": "Next.js, Tailwind, basic Anchor example, gill (based on @solana/kit), Wallet UI",
-        "id": "gh:solana-developers/solana-templates/templates/template-next-tailwind-basic",
+        "id": "gh:solana-foundation/templates/templates/template-next-tailwind-basic",
         "keywords": ["anchor-basic", "gill", "nextjs", "react", "solana-kit", "tailwind", "typescript", "wallet-ui"],
         "name": "template-next-tailwind-basic",
         "path": "templates/template-next-tailwind-basic"
       },
       {
         "description": "Next.js, Tailwind, Anchor Counter example, gill (based on @solana/kit), Wallet UI",
-        "id": "gh:solana-developers/solana-templates/templates/template-next-tailwind-counter",
+        "id": "gh:solana-foundation/templates/templates/template-next-tailwind-counter",
         "keywords": ["anchor-counter", "gill", "nextjs", "react", "solana-kit", "tailwind", "typescript", "wallet-ui"],
         "name": "template-next-tailwind-counter",
         "path": "templates/template-next-tailwind-counter"
       },
       {
         "description": "Node.js Express API with gill (based on @solana/kit)",
-        "id": "gh:solana-developers/solana-templates/templates/template-node-express",
+        "id": "gh:solana-foundation/templates/templates/template-node-express",
         "keywords": ["express", "gill", "node", "solana-kit"],
         "name": "template-node-express",
         "path": "templates/template-node-express"
       },
       {
         "description": "Node.js script with gill (based on @solana/kit)",
-        "id": "gh:solana-developers/solana-templates/templates/template-node-script",
+        "id": "gh:solana-foundation/templates/templates/template-node-script",
         "keywords": ["gill", "node", "solana-kit"],
         "name": "template-node-script",
         "path": "templates/template-node-script"
       },
       {
         "description": "React+Vite, Tailwind, gill (based on @solana/kit), Wallet UI",
-        "id": "gh:solana-developers/solana-templates/templates/template-react-vite-tailwind",
+        "id": "gh:solana-foundation/templates/templates/template-react-vite-tailwind",
         "keywords": ["gill", "react", "solana-kit", "tailwind", "typescript", "vite", "wallet-ui"],
         "name": "template-react-vite-tailwind",
         "path": "templates/template-react-vite-tailwind"
       },
       {
         "description": "React+Vite, Tailwind, gill (based on @solana/kit), basic Anchor example, Wallet UI",
-        "id": "gh:solana-developers/solana-templates/templates/template-react-vite-tailwind-basic",
+        "id": "gh:solana-foundation/templates/templates/template-react-vite-tailwind-basic",
         "keywords": ["anchor-basic", "gill", "react", "solana-kit", "tailwind", "typescript", "vite", "wallet-ui"],
         "name": "template-react-vite-tailwind-basic",
         "path": "templates/template-react-vite-tailwind-basic"
       },
       {
         "description": "React+Vite, Tailwind, gill (based on @solana/kit), Anchor Counter example, Wallet UI",
-        "id": "gh:solana-developers/solana-templates/templates/template-react-vite-tailwind-counter",
+        "id": "gh:solana-foundation/templates/templates/template-react-vite-tailwind-counter",
         "keywords": ["anchor-counter", "gill", "react", "solana-kit", "tailwind", "typescript", "vite", "wallet-ui"],
         "name": "template-react-vite-tailwind-counter",
         "path": "templates/template-react-vite-tailwind-counter"
@@ -69,14 +69,14 @@
     "templates": [
       {
         "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter",
-        "id": "gh:solana-developers/solana-templates/legacy/legacy-next-tailwind",
+        "id": "gh:solana-foundation/templates/legacy/legacy-next-tailwind",
         "keywords": ["legacy", "nextjs", "react", "solana-web3js", "tailwind", "typescript", "wallet-adapter"],
         "name": "legacy-next-tailwind",
         "path": "legacy/legacy-next-tailwind"
       },
       {
         "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter, basic Anchor program",
-        "id": "gh:solana-developers/solana-templates/legacy/legacy-next-tailwind-basic",
+        "id": "gh:solana-foundation/templates/legacy/legacy-next-tailwind-basic",
         "keywords": [
           "anchor-basic",
           "legacy",
@@ -92,7 +92,7 @@
       },
       {
         "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter, Anchor Counter program",
-        "id": "gh:solana-developers/solana-templates/legacy/legacy-next-tailwind-counter",
+        "id": "gh:solana-foundation/templates/legacy/legacy-next-tailwind-counter",
         "keywords": [
           "anchor-counter",
           "legacy",
@@ -108,14 +108,14 @@
       },
       {
         "description": "React + Vite, Tailwind, @solana/web3.js, Wallet Adapter",
-        "id": "gh:solana-developers/solana-templates/legacy/legacy-react-vite-tailwind",
+        "id": "gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind",
         "keywords": ["legacy", "react", "solana-web3js", "tailwind", "typescript", "vite", "wallet-adapter"],
         "name": "legacy-react-vite-tailwind",
         "path": "legacy/legacy-react-vite-tailwind"
       },
       {
         "description": "React + Vite, Tailwind, @solana/web3.js, Wallet Adapter, basic Anchor program",
-        "id": "gh:solana-developers/solana-templates/legacy/legacy-react-vite-tailwind-basic",
+        "id": "gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind-basic",
         "keywords": [
           "anchor-basic",
           "legacy",
@@ -131,7 +131,7 @@
       },
       {
         "description": "React + Vite, Tailwind, @solana/web3.js, Wallet Adapter, Anchor Counter program",
-        "id": "gh:solana-developers/solana-templates/legacy/legacy-react-vite-tailwind-counter",
+        "id": "gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind-counter",
         "keywords": [
           "anchor-counter",
           "legacy",

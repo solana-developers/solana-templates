@@ -14,7 +14,7 @@ This is a Next.js app containing:
 #### Download the template
 
 ```shell
-pnpm create solana-dapp@latest -t gh:solana-developers/solana-templates/templates/template-next-tailwind-basic
+pnpm create solana-dapp@latest -t gh:solana-foundation/templates/templates/template-next-tailwind-basic
 ```
 
 #### Install Dependencies
@@ -31,11 +31,14 @@ This is a Solana program written in Rust using the Anchor framework.
 
 #### Commands
 
-You can use any normal anchor commands. Either move to the `anchor` directory and run the `anchor` command or prefix the command with `pnpm`, eg: `pnpm anchor`.
+You can use any normal anchor commands. Either move to the `anchor` directory and run the `anchor` command or prefix the
+command with `pnpm`, eg: `pnpm anchor`.
 
 #### Sync the program id:
 
-Running this command will create a new keypair in the `anchor/target/deploy` directory and save the address to the Anchor config file and update the `declare_id!` macro in the `./src/lib.rs` file of the program. This will also update the constant in `anchor/src/basic-exports.ts` file.
+Running this command will create a new keypair in the `anchor/target/deploy` directory and save the address to the
+Anchor config file and update the `declare_id!` macro in the `./src/lib.rs` file of the program. This will also update
+the constant in `anchor/src/basic-exports.ts` file.
 
 ```shell
 pnpm run setup
