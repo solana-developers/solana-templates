@@ -109,57 +109,61 @@ Solana Mobile Templates
 
 `expo` `mobile-wallet-adapter` `react-native` `react-native-paper` `solana-web3js`
 
-# Legacy Templates
+# Web3.js Templates
 
-Legacy templates using @solana/web3.js
+Templates using @solana/web3.js (legacy)
 
-### [legacy-next-tailwind](legacy/legacy-next-tailwind)
+### [web3js-next-tailwind](web3js/web3js-next-tailwind)
 
-`gh:solana-foundation/templates/legacy/legacy-next-tailwind`
+`gh:solana-foundation/templates/web3js/web3js-next-tailwind`
 
 > Next.js, Tailwind, @solana/web3.js, Wallet Adapter
 
-`legacy` `nextjs` `react` `solana-web3js` `tailwind` `typescript` `wallet-adapter`
+`nextjs` `react` `solana-web3js` `tailwind` `typescript` `wallet-adapter`
 
-### [legacy-next-tailwind-basic](legacy/legacy-next-tailwind-basic)
+### [web3js-next-tailwind-basic](web3js/web3js-next-tailwind-basic)
 
-`gh:solana-foundation/templates/legacy/legacy-next-tailwind-basic`
+`gh:solana-foundation/templates/web3js/web3js-next-tailwind-basic`
 
 > Next.js, Tailwind, @solana/web3.js, Wallet Adapter, basic Anchor program
 
-`anchor-basic` `legacy` `nextjs` `react` `solana-web3js` `tailwind` `typescript` `wallet-adapter`
+`anchor-basic` `nextjs` `react` `solana-web3js` `tailwind` `typescript` `wallet-adapter`
 
-### [legacy-next-tailwind-counter](legacy/legacy-next-tailwind-counter)
+### [web3js-next-tailwind-counter](web3js/web3js-next-tailwind-counter)
 
-`gh:solana-foundation/templates/legacy/legacy-next-tailwind-counter`
+`gh:solana-foundation/templates/web3js/web3js-next-tailwind-counter`
 
 > Next.js, Tailwind, @solana/web3.js, Wallet Adapter, Anchor Counter program
 
-`anchor-counter` `legacy` `nextjs` `react` `solana-web3js` `tailwind` `typescript` `wallet-adapter`
+`anchor-counter` `nextjs` `react` `solana-web3js` `tailwind` `typescript` `wallet-adapter`
 
-### [legacy-react-vite-tailwind](legacy/legacy-react-vite-tailwind)
+### [web3js-react-vite-tailwind](web3js/web3js-react-vite-tailwind)
 
-`gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind`
+`gh:solana-foundation/templates/web3js/web3js-react-vite-tailwind`
 
 > React + Vite, Tailwind, @solana/web3.js, Wallet Adapter
 
-`legacy` `react` `solana-web3js` `tailwind` `typescript` `vite` `wallet-adapter`
+`react` `solana-web3js` `tailwind` `typescript` `vite` `wallet-adapter`
 
-### [legacy-react-vite-tailwind-basic](legacy/legacy-react-vite-tailwind-basic)
+### [web3js-react-vite-tailwind-basic](web3js/web3js-react-vite-tailwind-basic)
 
-`gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind-basic`
+`gh:solana-foundation/templates/web3js/web3js-react-vite-tailwind-basic`
 
 > React + Vite, Tailwind, @solana/web3.js, Wallet Adapter, basic Anchor program
 
-`anchor-basic` `legacy` `react` `solana-web3js` `tailwind` `typescript` `vite` `wallet-adapter`
+`anchor-basic` `react` `solana-web3js` `tailwind` `typescript` `vite` `wallet-adapter`
 
-### [legacy-react-vite-tailwind-counter](legacy/legacy-react-vite-tailwind-counter)
+### [web3js-react-vite-tailwind-counter](web3js/web3js-react-vite-tailwind-counter)
 
-`gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind-counter`
+`gh:solana-foundation/templates/web3js/web3js-react-vite-tailwind-counter`
 
 > React + Vite, Tailwind, @solana/web3.js, Wallet Adapter, Anchor Counter program
 
-`anchor-counter` `legacy` `react` `solana-web3js` `tailwind` `typescript` `vite` `wallet-adapter`
+`anchor-counter` `react` `solana-web3js` `tailwind` `typescript` `vite` `wallet-adapter`
+
+# Community Templates
+
+Templates maintained by the Solana community
 
 <!-- /automd -->
 

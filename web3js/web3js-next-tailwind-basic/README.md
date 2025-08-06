@@ -1,4 +1,4 @@
-# legacy-next-tailwind-basic
+# web3js-next-tailwind-basic
 
 This is a Next.js app containing:
 
@@ -14,7 +14,7 @@ This is a Next.js app containing:
 #### Download the template
 
 ```shell
-pnpm create solana-dapp@latest -t gh:solana-foundation/templates/legacy/legacy-next-tailwind-basic
+pnpm create solana-dapp@latest -t gh:solana-foundation/templates/web3js/web3js-next-tailwind-basic
 ```
 
 #### Install Dependencies

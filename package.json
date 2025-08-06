@@ -33,9 +33,9 @@
         "name": "Solana Mobile"
       },
       {
-        "description": "Legacy templates using @solana/web3.js",
-        "name": "Legacy Templates",
-        "path": "legacy"
+        "description": "Templates using @solana/web3.js (legacy)",
+        "name": "Web3.js Templates",
+        "path": "web3js"
       },
       {
         "description": "Templates maintained by the Solana community",

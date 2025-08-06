@@ -1,8 +1,7 @@
 {
-  "name": "legacy-next-tailwind",
+  "name": "web3js-next-tailwind",
   "description": "Next.js, Tailwind, @solana/web3.js, Wallet Adapter",
   "keywords": [
-    "legacy",
     "nextjs",
     "react",
     "solana-web3js",

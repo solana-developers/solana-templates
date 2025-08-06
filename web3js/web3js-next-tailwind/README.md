@@ -1,6 +1,6 @@
-# legacy-react-vite-tailwind
+# web3js-next-tailwind
 
-This is a Vite app containing:
+This is a Next.js app containing:
 
 - Tailwind CSS setup for styling
 - Useful wallet UI elements setup using [@solana/web3.js](https://www.npmjs.com/package/@solana/web3.js)
@@ -12,7 +12,7 @@ This is a Vite app containing:
 #### Download the template
 
 ```shell
-pnpm create solana-dapp@latest -t gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind
+pnpm create solana-dapp@latest -t gh:solana-foundation/templates/web3js/web3js-next-tailwind
 ```
 
 #### Install Dependencies
@@ -21,7 +21,7 @@ pnpm create solana-dapp@latest -t gh:solana-foundation/templates/legacy/legacy-r
 pnpm install
 ```
 
-### Start the web app
+#### Start the web app
 
 ```shell
 pnpm dev

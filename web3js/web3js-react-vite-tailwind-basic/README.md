@@ -1,4 +1,4 @@
-# legacy-react-vite-tailwind-basic
+# web3js-react-vite-tailwind-basic
 
 This is a Vite app containing:
 
@@ -14,7 +14,7 @@ This is a Vite app containing:
 #### Download the template
 
 ```shell
-pnpm create solana-dapp@latest -t gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind-basic
+pnpm create solana-dapp@latest -t gh:solana-foundation/templates/web3js/web3js-react-vite-tailwind-basic
 ```
 
 #### Install Dependencies

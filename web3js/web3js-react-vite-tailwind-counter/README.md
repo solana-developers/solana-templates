@@ -1,4 +1,4 @@
-# legacy-react-vite-tailwind-counter
+# web3js-react-vite-tailwind-counter
 
 This is a Vite app containing:
 
@@ -14,7 +14,7 @@ This is a Vite app containing:
 #### Download the template
 
 ```shell
-pnpm create solana-dapp@latest -t gh:solana-foundation/templates/legacy/legacy-react-vite-tailwind-counter
+pnpm create solana-dapp@latest -t gh:solana-foundation/templates/web3js/web3js-react-vite-tailwind-counter
 ```
 
 #### Install Dependencies

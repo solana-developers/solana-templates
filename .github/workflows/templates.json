@@ -1,10 +1,4 @@
 [
-  "legacy/legacy-next-tailwind",
-  "legacy/legacy-next-tailwind-basic",
-  "legacy/legacy-next-tailwind-counter",
-  "legacy/legacy-react-vite-tailwind",
-  "legacy/legacy-react-vite-tailwind-basic",
-  "legacy/legacy-react-vite-tailwind-counter",
   "mobile/web3js-expo",
   "mobile/web3js-expo-paper",
   "templates/template-next-tailwind",
@@ -14,5 +8,11 @@
   "templates/template-node-script",
   "templates/template-react-vite-tailwind",
   "templates/template-react-vite-tailwind-basic",
-  "templates/template-react-vite-tailwind-counter"
+  "templates/template-react-vite-tailwind-counter",
+  "web3js/web3js-next-tailwind",
+  "web3js/web3js-next-tailwind-basic",
+  "web3js/web3js-next-tailwind-counter",
+  "web3js/web3js-react-vite-tailwind",
+  "web3js/web3js-react-vite-tailwind-basic",
+  "web3js/web3js-react-vite-tailwind-counter"
 ]
