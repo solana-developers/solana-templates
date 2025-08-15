@@ -53,43 +53,39 @@ People _love_ thorough bug reports.
 
 ## Development Workflow
 
-In this section, you'll find the basic commands you need to run for building, testing, and maintaining the quality of
-the codebase.
+In this section, you'll find the basic commands you need to run for building, testing, and maintaining the quality of the codebase.
 
-### Building the Project
+### Setting Up the Project
 
-To compile the project and generate the necessary artifacts, use the build command:
+To get started with development:
 
 ```shell
-pnpm build
+pnpm install
 ```
 
-You can build the project in watch mode by using the following command for faster feedback:
+### Available Commands
+
+To see all available commands, run:
 
 ```shell
-pnpm build:watch
+pnpm run
 ```
 
-### Running Tests
+**Core Development Commands:**
 
-To ensure your contributions do not break any existing functionality, run the test suite with the following command:
+- `pnpm clean` - Clean generated files and artifacts
+- `pnpm generate` - Generate template files and configurations
+- `pnpm format` - Format code using prettier
+- `pnpm lint` - Lint code for style and quality issues
+- `pnpm update-deps` - Update all dependencies to latest versions
 
-```shell
-pnpm test
-```
+### Code Quality
 
-You can run the tests in watch mode by running the following command for faster feedback:
-
-```shell
-pnpm dev
-```
-
-### Linting Your Code
-
-It's important to maintain the coding standards of the project. Lint your code by executing:
+Ensure your code meets project standards:
 
 ```shell
-pnpm lint
+pnpm format  # Format code
+pnpm lint    # Check for issues
 ```
 
 ### Committing Your Changes
